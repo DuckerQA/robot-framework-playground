@@ -4,3 +4,5 @@ ${PASSWORD_FIELD}   id:password
 ${LOGIN_BUTTON}     id:login-button
 ${BURGER_BUTTON}    id:react-burger-menu-btn
 ${LOGOUT_BUTTON}    id:logout_sidebar_link
+${INVALID_USERNAME}    adminKoko
+${INVALID_PASSWORD}    wrong_password

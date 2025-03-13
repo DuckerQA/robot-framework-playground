@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 Resource    ../resources/variables.robot
 Resource    ../resources/locators.robot
+Library    ../resources/custom_keywords.py
 
 *** Keywords ***
 
@@ -21,3 +22,10 @@ Logout
     Wait Until Element Is Visible    ${LOGOUT_BUTTON}
     Click Element    ${LOGOUT_BUTTON}
     Wait Until Element Is Visible    ${USERNAME_FIELD}
+
+Login with Invalid Credentials
+    Enter Invalid Credentials  adminKoko    wrong_password
+
+Verify Login Error Message
+    ${error_message}=    Get Login Error Message
+    Should Contain    ${error_message}    Epic sadface: Username and password do not match any user in this service
